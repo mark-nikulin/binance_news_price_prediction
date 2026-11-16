@@ -1,0 +1,17 @@
+# Example backtester dependency file.
+# Copy to `requirements-backtest.txt` (or install directly) and point to your backtester package.
+#
+# IMPORTANT: Any custom backtester must be adapted to the contract defined in:
+#   news_pred/backtest/contract.py
+# Specifically:
+#   - Subclass `BaseBacktester` and implement `run(...) -> BacktestRunResult`
+#   - Consume signals matching `SIGNAL_SCHEMA`
+#   - Consume market bars containing `BARS_COLUMNS`
+# See `news_pred/backtest/backtest_strat_adapter.py` as the reference adapter.
+
+# Example (local editable install):
+# -e ../backtest_strat
+
+# Example (git repository):
+# git+https://github.com/<org>/<your-backtester>.git
+
